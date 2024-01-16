@@ -18,22 +18,12 @@ public:
         }
 
         vector<vector<int>> res (2);
-        // vector<pair<int, int>> vv;
         for (auto [player, lose]: um) {
             if (lose <= 1)
                 res[lose].push_back(player);
         }
         sort(res[0].begin(), res[0].end());
         sort(res[1].begin(), res[1].end());
-
-        // sort(vv.begin(), vv.end());
-
-        // for (auto& [lose, player]: vv) {
-        //     if (lose <= 1) 
-        //         res[lose].push_back(player);
-        //     else
-        //         break;
-        // }
 
         return res;
     }
